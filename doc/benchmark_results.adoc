@@ -1,0 +1,61 @@
+= kapture-localization / Image Retrieval Benchmark results
+:sectnums:
+:sectnumlevels: 0
+:toc:
+:toclevels: 1
+
+== Introduction
+Here we present *additional results (more global features, different local features)* computed to our image retrieval for visual localization benchmark presented in these two papers: https://arxiv.org/abs/2011.11946[3DV20], https://arxiv.org/abs/2205.15761[IJCV21]. Wrt local features, we use two versions of https://github.com/naver/r2d2[R2D2]: (i) the same as in the papers and (ii) a novel version which is not yet publicly available. However, we provide the local features for all datasets via our https://github.com/naver/kapture/blob/main/doc/tutorial.adoc#2-download-a-dataset[dataset downloader].
+
+Furthermore, we used a new implementation of the link:../tools/kapture_pycolmap_localsfm.py[local_sfm] (paradigm 2a in the papers) method. This version is much faster and provides similar performance.
+
+If you use these results in your own work, please cite one of our papers:
+
+----
+@inproceedings{benchmarking_ir3DV2020,
+      title={Benchmarking Image Retrieval for Visual Localization},
+      author={No{\'e} Pion, Martin Humenberger, Gabriela Csurka, Yohann Cabon, Torsten Sattler},
+      year={2020},
+      booktitle={International Conference on 3D Vision}
+}
+
+@article{humenberger2022investigating,
+  title={Investigating the Role of Image Retrieval for Visual Localization},
+  author={Humenberger, Martin and Cabon, Yohann and Pion, No{\'e} and Weinzaepfel, Philippe and Lee, Donghwan and Gu{\'e}rin, Nicolas and Sattler, Torsten and Csurka, Gabriela},
+  journal={International Journal of Computer Vision},
+  year={2022},
+  publisher={Springer}
+}
+----
+
+== Image retrieval models
+
+AP-GeM-LM18:
+https://drive.google.com/open?id=1r76NLHtJsH-Ybfda4aLkUIoW3EEsi25I[model],
+https://github.com/naver/deep-image-retrieval[code]
+
+DELG: https://github.com/tensorflow/models/tree/afdf2599b37a199821772f0d6eea9d9300cf9f8d/research/delf/delf/python/delg[code and model]
+
+r101delg_gldv2clean: https://github.com/tensorflow/models/blob/master/research/delf/delf/python/delg/r101delg_gldv2clean_config.pbtxt[model]
+
+densevlad_multi: https://openaccess.thecvf.com/content_cvpr_2015/papers/Torii_247_Place_Recognition_2015_CVPR_paper.pdf[paper], https://drive.google.com/file/d/1BMaMe1qzOD36Wa-9c0MOwPpDvrftD5zy/view?usp=sharing[code]
+
+fire: http://download.europe.naverlabs.com/ComputerVision/FIRe/official/fire.pth[model], https://github.com/naver/fire[code]
+
+how: https://github.com/gtolias/how[original code], https://github.com/naver/fire[we used this code]
+
+netvlad_vd16pitts: https://github.com/Relja/netvlad[code], https://www.di.ens.fr/willow/research/netvlad/data/models/vd16_pitts30k_conv5_3_vlad_preL2_intra_white.mat[model]
+
+openibl_vgg16_netvlad: https://github.com/yxgeee/OpenIBL[code], https://github.com/yxgeee/OpenIBL/releases/download/v0.1.0-beta/vgg16_netvlad.pth[model]
+
+== link:../doc/benchmark_results_aachen.adoc[Aachen Day-Night v1.1]
+
+
+== link:../doc/benchmark_results_baidu.adoc[Baidu-mall]
+
+
+== link:../doc/benchmark_results_robotcar.adoc[RobotCar Seasons]
+
+
+== link:../doc/benchmark_results_gangnam.adoc[Gangnam Station B2]
+
