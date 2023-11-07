@@ -1,11 +1,3 @@
-# Run this script in docker,
-# but first pull the most recent version.
-
-# docker pull kapture/kapture-localization
-# docker run --runtime=nvidia -it --rm --volume <my_data>:<my_data> kapture/kapture-localization
-# once the docker container is launched, go to your working directory of your choice (all data will be stored there)
-# and run this script from there (of course you can also change WORKING_DIR=${PWD} to something else and run the script from somewhere else)
-
 # 0a) Define paths
 PYTHONBIN=python3.8
 WORKING_DIR=${PWD}
@@ -17,9 +9,7 @@ TOPK=20  # number of retrieved images for mapping and localization
 KPTS=20000 # number of local features to extract
 
 # 0b) Get extraction code for local and global features
-# ! skip if already done !
-# Deep Image retrieval - AP-GeM
-pip3 install scikit-learn==0.22 torchvision==0.5.0 gdown tqdm
+
 cd ${WORKING_DIR}
 git clone https://github.com/naver/deep-image-retrieval.git
 cd deep-image-retrieval
