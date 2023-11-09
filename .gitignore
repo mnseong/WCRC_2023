@@ -211,8 +211,9 @@ pyrightconfig.json
 
 # Feature Folder
 
-pipeline/shell_codes/datasets/GangamStation/*
-pipeline/shell_codes/GangamStation/*
+pipeline/shell_codes/datasets/GangnamStation/
 # pipeline/shell_codes/r2d2/*
+pipeline/shell_codes/GangnamStation/
 
-
+# model
+*.pt
