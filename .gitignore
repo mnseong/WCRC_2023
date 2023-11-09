@@ -208,3 +208,11 @@ pyrightconfig.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,linux
+
+# Feature Folder
+
+pipeline/shell_codes/datasets/GangamStation/*
+pipeline/shell_codes/GangamStation/*
+# pipeline/shell_codes/r2d2/*
+
+

@@ -15,4 +15,4 @@ kornia>=0.6.11
 gdown
 scikit-learn==0.22
 torch==2.1.0
-torchvision
+torchvision==0.16.0
